@@ -31,6 +31,7 @@ function findCorrect(id){
 }
 
 
+/*нерабочая функция проверки правильности ответа*/
 function checkAnswer(id){
     choice = questions[id].getElementsByName("choices") 
 }
