@@ -8,14 +8,14 @@ function createMultiple(id){
     questions[id].innerHTML += "<button onclick='checkAnswer()'>Перевірити</button></br>";
 }
 
-/*function createCheckBox(i){
+/*function createCheckBox(id){
     
 }
 
-function createNumInPut(i){
+function createNumInPut(id){
 }
 
-function createStrInput(i){
+function createStrInput(id){
 }*/
 
 
