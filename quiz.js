@@ -2,17 +2,18 @@ var questions = document.getElementsByTagName("question");
 
 /*create Multiple choice question*/
 function createMultiple(id){
-    for (i = 0; i< questions[id].getElementsByTagName("choice").length; i++){
+    for (var i = 0; i< questions[id].getElementsByTagName("choice").length; i++){
         questions[id].getElementsByTagName("choice")[i].innerHTML = "<input type='radio' name='choices' value='a" + i + "'>"+questions[id].getElementsByTagName("choice")[i].textContent+"</br>";  
     } 
     questions[id].innerHTML += "<button onclick='checkAnswer()'>Перевірити</button></br>";
 }
 
-/*function createCheckBox(id){
-    
+function createCheckBox(id){
+   for (var i = 0; i< questions[id].getElementsByTagName("choice").length; i++){
+        questions[id].getElementsByTagName("choice")[i].innerHTML = "<input type='checkbox' name='choices' value='a" + i + "'>"+questions[id].getElementsByTagName("choice")[i].textContent+"</br>"; 
 }
-
-function createNumInPut(id){
+	questions[id].innerHTML += "<button onclick='checkAnswer()'>Перевірити</button></br>";
+/*function createNumInPut(id){
 }
 
 function createStrInput(id){
@@ -22,7 +23,7 @@ function createStrInput(id){
 function findCorrect(id){
     var answers = questions[id].getElementsByTagName("choice");
     var correctAns = 0;
-    for (i = 0; i < answers.lenght; i++){
+    for (var i = 0; i < answers.lenght; i++){
         if (answers[i].getAttribute("correct")== "true"){
             correctAns = i;
         }
